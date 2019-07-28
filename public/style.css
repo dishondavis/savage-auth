@@ -1,6 +1,11 @@
 body{
   padding-top:80px;
   word-wrap:break-word;
+  background-image: url(https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F736x%2Fc5%2F4a%2F24%2Fc54a2425eaffe625be1c55be308b2d43.jpg&f=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 img{
   height: 200px;
