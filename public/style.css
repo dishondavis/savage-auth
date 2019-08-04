@@ -1,7 +1,52 @@
 body{
   padding-top:80px;
   word-wrap:break-word;
+  background-image: url(https://sdtimes.com/wp-content/uploads/2018/10/computer-1591018_960_720-1-490x320.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
 }
 img{
   height: 200px;
 }
+.container .jumbotron{
+  border-radius: 45%;
+  opacity: .70;
+  margin-top: 100px;
+  padding: 2em;
+  border: 1px solid grey;
+  width: 90%;
+  background-color: grey;
+  font-weight: 600;
+}
+.navbar{
+  top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    align-items: center;
+}
+.navbar > li{
+  color: white;
+  text-decoration: none;
+}
+
+ul{
+  display: inline-flex;
+margin: 20px 0px 25px 0px;
+}
+
+ul > li > a{
+  margin: 0px 100px 0 40px;
+}
+
+.col-sm-6{
+  text-align: center;
+    margin-left: 25%;
+    padding-bottom: 35px
+}
+.rounded-circle{
+  padding: 0 139px 0 0;
+}
+
+/* https://2eof2j3oc7is20vt9q3g7tlo5xe-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/shutterstock_security_IT-370x228.jpg */

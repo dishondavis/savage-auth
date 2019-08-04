@@ -1,5 +1,6 @@
 var thumbUp = document.getElementsByClassName("fa-thumbs-up");
 var trash = document.getElementsByClassName("fa-trash");
+var thumbDown = document.getElementsByClassName("fa fa-thumbs-down");
 
 Array.from(thumbUp).forEach(function(element) {
       element.addEventListener('click', function(){
@@ -7,6 +8,31 @@ Array.from(thumbUp).forEach(function(element) {
         const msg = this.parentNode.parentNode.childNodes[3].innerText
         const thumbUp = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
         fetch('messages', {
+          method: 'put',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            'name': name,
+            'msg': msg,
+            'thumbUp':thumbUp
+          })
+        })
+        .then(response => {
+          if (response.ok) return response.json()
+        })
+        .then(data => {
+          console.log(data)
+          window.location.reload(true)
+        })
+      });
+});
+
+Array.from(thumbDown).forEach(function(element) {
+      element.addEventListener('click', function(){
+        console.log("thumbDown", thumbDown)
+        const name = this.parentNode.parentNode.childNodes[1].innerText
+        const msg = this.parentNode.parentNode.childNodes[3].innerText
+        const thumbUp = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
+        fetch('countDown', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
