@@ -1,10 +1,18 @@
 body{
   padding-top:80px;
   word-wrap:break-word;
+<<<<<<< HEAD
   background-image: url(https://sdtimes.com/wp-content/uploads/2018/10/computer-1591018_960_720-1-490x320.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: sans-serif;
+=======
+  background-image: url(https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F736x%2Fc5%2F4a%2F24%2Fc54a2425eaffe625be1c55be308b2d43.jpg&f=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1.8rem;
+  font-weight: bold;
+>>>>>>> 7517e87a003e6516a50e892c30a2c3be21a76baa
 }
 img{
   height: 200px;

@@ -9,7 +9,11 @@ module.exports = function(app, passport, db) {
 
     // PROFILE SECTION =========================
     app.get('/profile', isLoggedIn, function(req, res) {
+<<<<<<< HEAD
         db.collection('finalProject').find().toArray((err, result) => {
+=======
+        db.collection('getFit').find().toArray((err, result) => {
+>>>>>>> 7517e87a003e6516a50e892c30a2c3be21a76baa
           if (err) return console.log(err)
           res.render('profile.ejs', {
             user : req.user,
@@ -27,7 +31,11 @@ module.exports = function(app, passport, db) {
 // message board routes ===============================================================
 
     app.post('/messages', (req, res) => {
+<<<<<<< HEAD
       db.collection('finalProject').save({name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown:0}, (err, result) => {
+=======
+      db.collection('getFit').save({name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown:0}, (err, result) => {
+>>>>>>> 7517e87a003e6516a50e892c30a2c3be21a76baa
         if (err) return console.log(err)
         console.log('saved to database')
         res.redirect('/profile')
@@ -35,7 +43,11 @@ module.exports = function(app, passport, db) {
     })
 
     app.put('/messages', (req, res) => {
+<<<<<<< HEAD
       db.collection('finalProject')
+=======
+      db.collection('getFit')
+>>>>>>> 7517e87a003e6516a50e892c30a2c3be21a76baa
       .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
         $set: {
           thumbUp:req.body.thumbUp + 1
@@ -50,7 +62,11 @@ module.exports = function(app, passport, db) {
     })
 
     app.put('/countDown', (req, res) => {
+<<<<<<< HEAD
       db.collection('finalProject')
+=======
+      db.collection('getFit')
+>>>>>>> 7517e87a003e6516a50e892c30a2c3be21a76baa
       .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
         $set: {
           thumbUp:req.body.thumbUp - 1
@@ -65,7 +81,11 @@ module.exports = function(app, passport, db) {
     })
 
     app.delete('/messages', (req, res) => {
+<<<<<<< HEAD
       db.collection('finalProject').findOneAndDelete({name: req.body.name, msg: req.body.msg}, (err, result) => {
+=======
+      db.collection('getFit').findOneAndDelete({name: req.body.name}, (err, result) => {
+>>>>>>> 7517e87a003e6516a50e892c30a2c3be21a76baa
         if (err) return res.send(500, err)
         res.send('Message deleted!')
       })

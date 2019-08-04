@@ -4,7 +4,11 @@
 // get all the tools we need
 var express  = require('express');
 var app      = express();
+<<<<<<< HEAD
 var port     = process.env.PORT || 2222 ;
+=======
+var port     = process.env.PORT || 5050 ;
+>>>>>>> 7517e87a003e6516a50e892c30a2c3be21a76baa
 const MongoClient = require('mongodb').MongoClient
 var mongoose = require('mongoose');
 var passport = require('passport');
